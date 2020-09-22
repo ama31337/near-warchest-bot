@@ -191,7 +191,8 @@ if isNewValidatorInNextEpoch():
 currentSeatPrice = getCurrentSeatPrice()
 nextSeatPrice = getNextSeatPrice()
 proposalsSeatPrice = getProposalsSeatPrice()
-maxSeatPrice = max(nextSeatPrice, proposalsSeatPrice)
+fixedSeat = 149000
+maxSeatPrice = max(nextSeatPrice, proposalsSeatPrice, fixedSeat)
 printAndLog(f"Seat price: current {currentSeatPrice}, next {nextSeatPrice}, proposals {proposalsSeatPrice}, max (selected) {maxSeatPrice}")
 
 poolSize = getPoolSize()
