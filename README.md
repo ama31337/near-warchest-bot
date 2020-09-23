@@ -37,10 +37,8 @@ chmod +x /home/$USER/near-warchest-bot/near-warchest-bot.py
 
 ```
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/10 * * * * /usr/bin/python3 /home/lux/near-warchest-bot/near-warchest-bot-guildnet.py >> /home/lux/near-warchest-bot/guildnet.log 2>&1
+*/10 * * * * echo "`date`" >> /home/$USER/near-warchest-bot/warchest.log ; /usr/bin/python3 /home/lux/near-warchest-bot/near-warchest-bot-guildnet.py >> /home/lux/near-warchest-bot/warchest.log 2>&1
 ```
-
-**✅Installation completed**
 
 You can run the script manually to make sure that everything works:
 
